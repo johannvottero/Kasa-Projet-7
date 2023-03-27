@@ -1,0 +1,18 @@
+.card-logement{
+    position: relative;
+}
+
+.card-logement img{
+    height: 340px;
+    width: 340px;
+    margin: 0;
+    border-radius: 15px;
+}
+
+.card-logement__title {
+    position: absolute;
+    bottom: -5px;
+    color: $tertiary-color;
+    width: 260px;
+    padding: 15px;
+}

@@ -1,0 +1,10 @@
+.gallery-Container {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+	background-color: $secondary-color;
+    width: 100%;
+	height: 60px;
+    gap: 20px;
+    margin: 22px 0; 
+}

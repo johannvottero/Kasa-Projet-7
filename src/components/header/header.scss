@@ -1,0 +1,42 @@
+.headerWrap {
+	display: flex;
+	justify-content: space-between;
+	margin: 5%;
+
+&_logo {
+    display: flex;
+	align-items: flex-start;
+	margin: 0;
+	width: 9rem;
+}
+
+&_ul {   
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin-left: 1.5rem;
+    color: $primary-color;
+    font-size: 1.3rem;
+	&:hover {
+		text-decoration: underline;
+	}
+	}
+}
+
+@media screen and (max-width: $breakpoint-desktop) {
+    	/*header*/
+.headerWrap{
+    &_logo{
+        width: 4rem;
+        }
+        &_nav ul{
+        display: inline;
+        }
+        li{
+        font-size: 0.8rem;
+        }		
+        }
+    
+    }

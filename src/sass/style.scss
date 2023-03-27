@@ -1,3 +1,10 @@
-body{
-    background: grey;
-}
+@import './utils/variables';
+@import './utils/mixins';
+@import './Base/base';
+@import '../components/header/header';
+@import '../components/banner/banner';
+@import '../components/footer/footer';
+@import '../components/gallery/gallery';
+
+
+@import '../pages/error404/error404';

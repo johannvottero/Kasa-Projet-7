@@ -1,0 +1,83 @@
+.lodging-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.lodging-heading-main-location{
+    display: flex;
+    flex-direction: column;
+}
+
+.lodging-heading-main h1 {
+    font-size: 2rem;
+}
+
+.lodging-heading-main__location {
+    font-size: 1rem;
+    color: $primary-color;
+    margin-top: 1%;
+}
+
+.lodging-heading-main-owner {
+    font-size: 1rem;
+    color: $primary-color;
+}
+
+.lodging-heading-main-owner{
+    display: flex;
+}
+
+.lodging-subheading-tags-pill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px    ;
+    background-color: $primary-color;
+    width: 110px;
+    height: 30px;
+    color: $secondary-color;
+}
+
+.collapse-container{
+    margin: 2% 0; 
+}
+
+.lodging-heading-main-owner__picture img{
+    border-radius: 50%;
+    height: 100px;
+    
+}
+
+.lodging-subheading{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.lodging-subheading__ratings{
+    display: flex;
+    justify-content: space-around;
+}
+
+.lodging-subheading__ratings img{
+    width: 25px;
+    height: 25px;
+    margin-left:10px ;
+}
+
+.lodging-collapse-container
+{
+    display: flex;
+    width: 100%;
+}
+
+.lodging-collapse-container__rightColumn{
+    margin-right: 30px;
+    width: 100%;
+}
+
+.lodging-collapse-container__leftColumn{
+    margin-left: 30px;
+    width: 100%;
+}

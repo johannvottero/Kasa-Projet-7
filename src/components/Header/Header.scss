@@ -1,7 +1,7 @@
 .headerWrap {
 	display: flex;
 	justify-content: space-between;
-	margin: 5% 0;
+	margin-top: 2%;
 
 &_logo {
     display: flex;
@@ -25,17 +25,23 @@ li {
 	}
 }
 
-@media screen and (max-width: $breakpoint-desktop) {
-    	/*header*/
+@media screen and (max-width: 991px) {
+
 .headerWrap{
-    &_logo{
-        width: 4rem;
+    align-items: center;
+    margin-top: 10%;
+
+        &_logo{
+        width: 15rem;
+        }
+        &_nav{
+            margin: auto;
         }
         &_nav ul{
         display: inline;
         }
         li{
-        font-size: 0.8rem;
+        font-size: 2rem;
         }		
         }
     

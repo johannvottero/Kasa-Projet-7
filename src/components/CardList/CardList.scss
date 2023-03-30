@@ -1,0 +1,18 @@
+.home_CardList {
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+	background-color: $secondary-color;
+    width: 100%;
+    gap: 60px;
+    margin: 30px 0; 
+    padding: 50px;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 991px) {
+    .home_CardList{
+        flex-direction: column;
+    }
+
+}

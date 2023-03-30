@@ -1,18 +1,13 @@
 /* import React from "react"; */
-import Banner from '../../components/banner/Banner';
-import Gallery from '../../components/gallery/Gallery';
-/* import Footer from '../components/footer/Footer'; */
-
-/* import Header from '../../components/Header' */
+import Banner from '../../components/Banner/Banner';
+import CardList from '../../components/CardList/CardList';
 
 
 export default function Home() {
 	return (
-		<div className='home'>
+		<div className='home main_container'>
 			<Banner/>
-			<Gallery/>
-			<footer/>
-			
+			<CardList/>
 		</div>
 	)
 }

@@ -3,8 +3,8 @@
 }
 
 .card-logement img{
-    height: 340px;
-    width: 340px;
+    height: 300px;
+    width: 300px;
     margin: 0;
     border-radius: 15px;
 }
@@ -16,3 +16,13 @@
     width: 260px;
     padding: 15px;
 }
+
+@media screen and (max-width: 991px) {
+        .card-logement img{
+        height: 700px;
+        width: 700px;
+        }
+        .card-logement__title{
+        font-size: 2rem;
+        }
+    }

@@ -12,7 +12,7 @@ import VectorredStar from '../../assets/Vectorredstar.png'; */
 const Lodging = () => {
 
 	return (
-		<div className="lodging main_container">
+		<div className="lodging main-container">
 			<Gallery/>
 			<Link className='lodging' to='/lodging'></Link>
 			<div className="lodging-heading">

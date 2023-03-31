@@ -5,7 +5,7 @@ import DropdownLarge from "../../components/DropdownLarge/DropdownLarge";
 
 	export default function AboutUs () {
 		return (
-			<div className='collapse_container main_container'>
+			<div className='collapse_container main-container'>
 				<Banner src=""/>
 				<DropdownLarge/>
 				<DropdownLarge/>

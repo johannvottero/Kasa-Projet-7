@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function Error404 () {
 	return (
-		<div className='notFound'>
+		<div className='notFound main-container'>
 			<div className="notFound_infos">
 				<h1 className='notFound_infos_title'>404</h1>
 				<p className='notFound_infos_content'>La page que vous recherchez n'existe pas.</p>

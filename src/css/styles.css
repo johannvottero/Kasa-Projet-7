@@ -1,19 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-* {
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
+  font-style: normal;
 }
 
-/* body{
-    max-width: 1440px;
-    margin: 0 auto;
-        padding-top: 20px;
-    }
- */
-.main_container {
-  width: 1170px;
-  margin: auto;
-  height: auto;
+.body {
+  max-width: 1440px;
+  padding-top: 40px;
+  margin: 0 auto;
 }
 
 a {
@@ -25,9 +22,10 @@ li {
   list-style: none;
 }
 
-@media screen and (max-width: 769px) {
-  body {
-    margin: 0 auto;
+@media screen and (max-width: 992px) {
+  .body {
+    margin: 3% 3%;
+    width: 100%;
   }
 }
 /*import components*/
@@ -55,19 +53,25 @@ li {
   text-decoration: underline;
 }
 
-@media screen and (max-width: 769px) {
-  /*header*/
+@media screen and (max-width: 991px) {
+  .headerWrap {
+    align-items: center;
+    margin-top: 10%;
+  }
   .headerWrap_logo {
-    width: 4rem;
+    width: 300px;
+  }
+  .headerWrap_nav {
+    margin: auto;
   }
   .headerWrap_nav ul {
     display: inline;
   }
   .headerWrap li {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
+    font-weight: 500;
   }
 }
-/*banner*/
 .banner img {
   width: 100%;
   height: 100%;
@@ -87,22 +91,20 @@ li {
   left: 25%;
   color: #F7F7F7;
   font-size: 3rem;
+  font-weight: 500;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 991px) {
+  .banner {
+    width: 100%;
+    margin: 0 3%;
+    height: 260px;
+  }
   .banner figcaption {
-    position: absolute;
-    top: 30%;
-    bottom: 50%;
-    left: 22%;
-    color: #F7F7F7;
-    font-size: 1rem;
+    font-size: 3.5rem;
+    left: 10%;
   }
 }
-.banner-container_img {
-  height: 80px;
-}
-
 .foot-container {
   display: flex;
   align-items: center;
@@ -125,18 +127,13 @@ li {
   margin-top: 5%;
 }
 
-/* @media screen and (max-width: $breakpoint-desktop) {
-    .foot-container {
-		&__text {
-			font-size: 0.7rem;
-		}
-
-		img {
-			height: 1.5rem;
-		}
-	}
-} */
-.home_gallery {
+@media screen and (max-width: 991px) {
+  .foot-container {
+    height: 180px;
+    margin: 0;
+  }
+}
+.home_CardList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -148,6 +145,12 @@ li {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 991px) {
+  .home_CardList {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .card-logement {
   position: relative;
 }
@@ -167,6 +170,18 @@ li {
   padding: 15px;
 }
 
+@media screen and (max-width: 991px) {
+  .card-logement img {
+    height: 580px;
+    width: 700px;
+  }
+  .card-logement__title {
+    font-size: 2rem;
+  }
+  .card-logement__title {
+    width: 450px;
+  }
+}
 .Gallery {
   width: 100%;
   margin: auto;
@@ -270,9 +285,13 @@ a {
   align-items: center;
   border-radius: 25px;
   background-color: #ff6060;
-  width: 50px;
+  width: 110px;
   height: 30px;
   color: #f7f7f7;
+}
+
+.collapse-container {
+  margin: 2% 0;
 }
 
 .lodging-heading-main-owner__picture img {
@@ -282,18 +301,33 @@ a {
 
 .lodging-subheading {
   display: flex;
+  justify-content: space-between;
 }
 
 .lodging-subheading__ratings {
   display: flex;
+  justify-content: space-around;
+}
+
+.lodging-subheading__ratings img {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+
+.lodging-collapse-container {
+  display: flex;
+  width: 100%;
 }
 
 .lodging-collapse-container__rightColumn {
   margin-right: 30px;
+  width: 100%;
 }
 
 .lodging-collapse-container__leftColumn {
   margin-left: 30px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

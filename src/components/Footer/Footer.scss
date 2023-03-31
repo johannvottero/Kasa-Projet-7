@@ -22,14 +22,10 @@
 	}
 }
 
-/* @media screen and (max-width: $breakpoint-desktop) {
-    .foot-container {
-		&__text {
-			font-size: 0.7rem;
-		}
-	
-		img {
-			height: 1.5rem;
-		}
-	}
-} */
+@media screen and (max-width: 991px) {
+	.foot-container{
+		height: 180px;
+		margin: 0;
+
+}
+}

@@ -28,11 +28,10 @@ li {
 @media screen and (max-width: 991px) {
 
 .headerWrap{
-    align-items: center;
-    margin-top: 10%;
-
+    margin-top: 0%;
+    padding-top: 1%;
         &_logo{
-        width: 15rem;
+        width: 35%;
         }
         &_nav{
             margin: auto;
@@ -41,7 +40,8 @@ li {
         display: inline;
         }
         li{
-        font-size: 2rem;
+        font-size: 1.3rem;
+        font-weight: 500;
         }		
         }
     

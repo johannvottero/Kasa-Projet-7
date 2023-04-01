@@ -3,18 +3,20 @@
 	height: 100%;
 	border-radius: 25px;
 	opacity: 0.9;
+	filter: brightness(50%)
 }
 
 .banner{
 	position: relative;
 	margin: 3% 0;
+	
 }
 
 .banner figcaption{
 	position: absolute;
 	top: 35%;
 	bottom: 50%;
-	left: 25%;
+	left: 20%;
 	color: $tertiary-color;
 	font-size: 3rem;
 	font-weight: 500;

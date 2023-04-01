@@ -29,12 +29,13 @@ li {
 
 .headerWrap{
     margin-top: 0%;
-    padding-top: 1%;
+    padding-top: 5%;
+    align-items: center;
         &_logo{
         width: 35%;
         }
         &_nav{
-            margin: auto;
+            margin: 0;
         }
         &_nav ul{
         display: inline;
@@ -42,6 +43,7 @@ li {
         li{
         font-size: 1.3rem;
         font-weight: 500;
+        text-transform: uppercase;
         }		
         }
     

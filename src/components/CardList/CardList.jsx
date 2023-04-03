@@ -1,30 +1,21 @@
-import datas from '../../data/data'
+import datas from '../../data/datas'
 import Card from '../Card/Card'
+import { Link } from "react-router-dom";
 
-export default function Gallery() {
+export default function CardList() {
 
     return (
         <main className='home_CardList'>
-            {datas.map(data => {
-                return (
-                    <Card
-                        key={data.id}
-                        id={data.id}
-                        title={data.title}
-                        cover={data.cover}
-                    />
-                )
-            })}
+                    { datas && datas.length > 0 && datas.map((lodging) =>
+                        <Link key={`${lodging.id}`} to={`/lodging/${lodging.id}`}>
+                            <Card   
+                                key={lodging.id}
+                                id={lodging.id}
+                                title={lodging.title}
+                                cover={lodging.cover}
+                                />  
+                        </Link>       
+                    )}
         </main>
     )
 }
-
-/* <div className="Card__container">
-    {data && data.length > 0 && data.map((lodging) =>
-        <Link key{`${lodging.id`} to={`/lodging/${lodging.id}`>
-            <Card   
-                key={`lodging.id`}
-        </Link>
-        )}
-</div>
- */

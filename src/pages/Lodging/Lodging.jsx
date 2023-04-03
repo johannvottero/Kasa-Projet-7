@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+/* import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react" */
 import Gallery from '../../components/Gallery/Gallery';
 import DropdownLarge from "../../components/DropdownLarge/DropdownLarge";
 import redstar from "../../assets/Vectorredstar.png";
@@ -7,6 +9,9 @@ import greystar from "../../assets/Vectorgreystar.png";
 
 const Lodging = () => {
 
+/* 	const idLodging = useParams('id').id;
+	const dataCurrentLodging = datas.filter(data => data.id === idLodging);
+ */
 	return (
 		<div className="lodging main-container">
 			<Gallery/>

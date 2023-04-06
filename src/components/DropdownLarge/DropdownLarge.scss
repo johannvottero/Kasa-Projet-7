@@ -19,6 +19,7 @@
     z-index: 1;
 }
 
+
 .collapse_container__content{
     background-color: $tertiary-color;
     width: 100%;
@@ -28,5 +29,23 @@
     top: -35px;
     padding: 40px 15px;
 
+
 }
 
+.open{
+    display: block;
+}
+
+.closed {
+    display: none;
+    }
+
+.unfold{
+	transform: rotate(0deg);
+	transition: 0.1s ease-in-out;
+}
+
+.fold{
+    transform: rotate(180deg);
+	transition: 0.1s ease-in-out;
+}

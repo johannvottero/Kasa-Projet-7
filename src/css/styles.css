@@ -162,10 +162,11 @@ li {
 }
 
 .card-logement img {
-  height: 300px;
-  width: 300px;
+  height: 320px;
+  width: 320px;
   margin: 0;
   border-radius: 15px;
+  object-fit: cover;
 }
 
 .card-logement__title {
@@ -232,6 +233,24 @@ li {
   padding: 40px 15px;
 }
 
+.open {
+  display: block;
+}
+
+.closed {
+  display: none;
+}
+
+.unfold {
+  transform: rotate(180deg);
+  transition: 0.1s ease-in-out;
+}
+
+.fold {
+  transform: rotate(180deg);
+  transition: 0.1s ease-in-out;
+}
+
 /* @import '../components/DropdownSmall/DropdownSmall'; */
 /*import page style sheets*/
 .notFound_infos_title {
@@ -258,6 +277,24 @@ a {
   color: #ff6060;
 }
 
+.about_banner {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  opacity: 0.9;
+  position: relative;
+  margin: 3% 0;
+  object-fit: cover;
+  height: 188px;
+}
+
+@media screen and (max-width: 991px) {
+  .about_banner {
+    width: 100%;
+    height: 150px;
+    margin: 0%;
+  }
+}
 .collapse_container_main {
   width: 75%;
   margin: auto;
@@ -314,13 +351,18 @@ a {
   display: flex;
 }
 
+.lodging-subheading-tags {
+  display: flex;
+  justify-content: space-around;
+}
+
 .lodging-subheading-tags-pill {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-around;
   border-radius: 25px;
-  margin-top: 3%;
-  width: 110px;
+  margin: 3% 1% 0 0;
+  width: 12rem;
   height: 30px;
   color: #f7f7f7;
   background-color: #ff6060;
@@ -338,7 +380,7 @@ a {
 .lodging-subheading__ratings {
   display: flex;
   justify-content: space-around;
-  margin-top: 25%;
+  margin-top: 23%;
 }
 
 .lodging-subheading__ratings img {
@@ -381,6 +423,7 @@ a {
   }
   .lodging-heading-main-owner {
     display: flex;
+    justify-content: end;
     width: 50%;
     margin: 0;
   }

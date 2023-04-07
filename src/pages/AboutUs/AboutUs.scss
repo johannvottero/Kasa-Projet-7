@@ -5,10 +5,24 @@
 	border-radius: 25px;
 	opacity: 0.9;
     position: relative;
-	margin: 3% 0;
+	margin-top: 3%;
     object-fit: cover;
     height: 188px;
 }
+
+.collapse_container_AboutUs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    padding: 1% 0 20% 0;
+}
+
+.collapse_container__content{
+    margin-top: 1%;
+}
+
 
 @media screen and (max-width: 992px)
 {
@@ -18,19 +32,16 @@
         height: 1200px;
         margin: 0%;
         }
-    }
+
     
-    .collapse_container_main {
-        width: 75%;
-        margin: auto;
-        min-height: 500px;
-    }
-    
-    .collapse_container_main{
+    .collapse_container_AboutUs {
         display: flex;
         flex-direction: column;
         gap: 5%;
         width: 80%;
         margin: auto;
-
     }
+    .about_banner{
+        height: 150px;
+    }
+}

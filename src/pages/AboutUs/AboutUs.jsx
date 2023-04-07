@@ -52,24 +52,25 @@ const AboutDatas = [
 	},
 ]
 
-
 		return (
-				<div className='collapse_container main-container'>
-				<img
-					className="banner-img about_banner"
-					src={about_banner}
-					alt="Banner">
-				</img>
+				<div className='main-container'>
+					<img
+						className="banner-img about_banner"
+						src={about_banner}
+						alt="Banner">
+					</img>
 
-			{/* Looping through the aproposData array and displaying each item as a Collapse. */}
-			{AboutDatas.map((AboutData, index) => (
-				<DropdownLarge
-					title={AboutData.title}
-					content={AboutData.content}
-					key={`${AboutData.title}-${index}`}
-				/>
-			))}
-			</div>
+			{/* Looping through the AboutDatas array and displaying each item as a Dropdown. */}
+					<div className="collapse_container_AboutUs">
+					{AboutDatas.map((AboutData, index) => (
+						<DropdownLarge
+							title={AboutData.title}
+							content={AboutData.content}
+							key={`${AboutData.title}-${index}`}
+						/>
+					))}
+					</div>
+				</div>
 	)
 }
 

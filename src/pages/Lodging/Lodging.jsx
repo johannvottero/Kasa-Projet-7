@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Gallery from '../../components/Gallery/Gallery';
+import Ratings from '../../components/Ratings/Ratings';
 import DropdownLarge from "../../components/DropdownLarge/DropdownLarge";
 import redStar from "../../assets/Vectorredstar.png";
 import greyStar from "../../assets/Vectorgreystar.png";
@@ -11,6 +12,7 @@ const Lodging = () => {
 	const { id } = useParams();
 	const navigate = useNavigate();
 	const [lodging, setLodgingData] = useState(null);
+
 
 	useEffect(() => {
 		fetch("http://localhost:3000/lodgings.json", {
@@ -34,7 +36,7 @@ const Lodging = () => {
 			console.log(error);
 		});
 	}, []);
-
+	
 	return (
 		<div className="lodging main-container">
 			{lodging && (
@@ -61,11 +63,8 @@ const Lodging = () => {
 								</div>
 							</div>
 							<div className="lodging-subheading__ratings">
-								<img src={redStar} alt=""/>
-								<img src={redStar} alt=""/>
-								<img src={redStar} alt=""/>
-								<img src={greyStar} alt=""/>
-								<img src={greyStar} alt=""/>
+								<Ratings
+								/>
 							</div>
 						</div>
 					</div>
@@ -83,7 +82,7 @@ const Lodging = () => {
 									open={true}
 									title="Équipements"
 									content={lodging.equipments.map((equipement, index) =>
-										<li className="equipments" key={`equipments-${index}`}>{lodging.equipment}</li>
+										<li key={`equipment-${index}`}>{`${equipement}`}</li>
 									)}
 								/>
 							</div>

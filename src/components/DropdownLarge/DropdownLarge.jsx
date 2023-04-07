@@ -10,19 +10,10 @@ const DropdownLarge = (props) => {
 		//setting collapse state to closed
 		if(open === true) {
 			setOpen(false);
-			let DropDownOpen = document.querySelector(".collapse_container__content");
-			DropDownOpen.setAttribute('class','closed');
-			let DropDownChevron = document.querySelector(".collapse_container__chevron");
-			DropDownChevron.classList.add("fold")
-
 		}
 		//setting collapse state to open
 		else {
 			setOpen(true);
-			let DropDownOpen = document.querySelector(".collapse_container__content");
-			DropDownOpen.setAttribute('class','open');
-			let DropDownChevron = document.querySelector(".collapse_container__chevron");
-			DropDownChevron.classList.replace("fold", "unfold")
 		}
 	};
 
@@ -34,10 +25,10 @@ const DropdownLarge = (props) => {
 					<span>{props.title}</span>
 				</div>
 				<div className="collapse_container__chevron">
-					<img className="chevron" src={chevron} alt="chevron"/>
+				<div className={open ? `.collapse_container__chevron unfold ` : `.collapse_container__chevron fold`}><img className="chevron" src={chevron} alt="chevron"/></div>
 				</div>
 			</div>
-			<div className={open ? `collapse_container__content` : `collapse_container__content closed`}>{props.content}</div>
+			<div className={open ? `collapse_container__content open ` : `collapse_container__content closed`} >{props.content}</div>
 		</div>
 	);
 }

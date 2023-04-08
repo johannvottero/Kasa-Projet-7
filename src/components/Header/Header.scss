@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	margin-top: 2%;
 
-&_logo {
+    &_logo {
     display: flex;
 	align-items: flex-start;
 	margin: 0;
@@ -14,6 +14,14 @@
     text-align: center;
 }
 
+.nav-active li {
+    text-decoration: underline;
+}
+.nav-link li {
+    text-decoration: none;
+}
+
+
 li {
     display: inline-block;
     margin-left: 1.5rem;
@@ -22,8 +30,12 @@ li {
 	&:hover {
 		text-decoration: underline;
 	}
+    
 	}
 }
+
+
+
 
 @media screen and (max-width: 991px) {
 
@@ -32,7 +44,7 @@ li {
     padding-top: 5%;
     align-items: center;
         &_logo{
-        width: 35%;
+        width: 30%;
         }
         &_nav{
             margin: 0;

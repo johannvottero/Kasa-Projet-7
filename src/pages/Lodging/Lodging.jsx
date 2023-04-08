@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Gallery from '../../components/Gallery/Gallery';
 import Ratings from '../../components/Ratings/Ratings';
-import DropdownLarge from "../../components/DropdownLarge/DropdownLarge";
-import redStar from "../../assets/Vectorredstar.png";
-import greyStar from "../../assets/Vectorgreystar.png";
+import Dropdown from "../../components/Dropdown/Dropdown";
 
 const Lodging = () => {
 
@@ -35,7 +33,7 @@ const Lodging = () => {
 		.catch(function(error) {
 			console.log(error);
 		});
-	}, []);
+	},);
 	
 	return (
 		<div className="lodging main-container">
@@ -63,14 +61,13 @@ const Lodging = () => {
 								</div>
 							</div>
 							<div className="lodging-subheading__ratings">
-								<Ratings
-								/>
+							<Ratings rating={lodging.rating} />
 							</div>
 						</div>
 					</div>
 					<div className="lodging-collapse-container">
 						<div className="lodging-collapse-container__rightColumn">
-							<DropdownLarge
+							<Dropdown
 								open={true}
 								title="Description"
 								content={lodging.description}
@@ -78,7 +75,7 @@ const Lodging = () => {
 						</div>
 						{ lodging.equipments && lodging.equipments.length > 0 && (
 							<div className="lodging-collapse-container__leftColumn">
-								<DropdownLarge
+								<Dropdown
 									open={true}
 									title="Équipements"
 									content={lodging.equipments.map((equipement, index) =>

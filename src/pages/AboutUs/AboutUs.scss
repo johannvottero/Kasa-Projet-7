@@ -29,19 +29,22 @@
 
     .about_banner{
         width: 100%;
-        height: 1200px;
-        margin: 0%;
+        height: 120px;
+        margin: 2% 0%;
         }
+    
+    .banner-img{
+        height: 220px;
+    }
+    
 
     
     .collapse_container_AboutUs {
         display: flex;
         flex-direction: column;
         gap: 5%;
-        width: 80%;
-        margin: auto;
+        width: 100%;
+        margin: 1% 5% 50% auto;
     }
-    .about_banner{
-        height: 150px;
-    }
+
 }

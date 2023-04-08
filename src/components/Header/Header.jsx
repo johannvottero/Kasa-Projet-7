@@ -8,10 +8,12 @@ const Header = () => {
 			<img className="headerWrap_logo" src={logo} alt="logo de l'agence kasa" />
 			<nav className="headerWrap_nav">
 				<ul>
-					<NavLink to="/">
+					<NavLink className={({ isActive }) =>
+						isActive ? 'nav-active' : 'nav-link'} to="/">
 						<li>Accueil</li>
 					</NavLink>
-					<NavLink to="/about-us">
+					<NavLink className={({ isActive }) =>
+						isActive ? 'nav-active' : 'nav-link'} to="/about-us">
 						<li>À propos</li>
 					</NavLink>
 				</ul>

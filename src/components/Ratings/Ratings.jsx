@@ -1,43 +1,30 @@
-import greystar from "../../assets/Vectorgreystar.png";
+import React from "react";
 import redstar from "../../assets/Vectorredstar.png";
+import greystar from "../../assets/Vectorgreystar.png";
 
-
-const Ratings = ({Rating}) => {
-    const Rating = [1, 2, 3, 4, 5];
-
-    switch (Rating) {
-        case (Rating === 1):
-        <div>
-            {redstar}{greystar}{greystar}{greystar}{greystar}
-        </div>
-          break;
-        case (Rating === 2):
-        <div>
-            {redstar}{redstar}{greystar}{greystar}{greystar}
-        </div>
-          break;
-        case (Rating === 3):
-            <div>
-            {redstar}{redstar}{redstar}{greystar}{greystar}
-            </div>
-          break;
-        case (Rating === 4):
-            <div>
-                {redstar}{redstar}{redstar}{redstar}{greystar}
-            </div>
-            break;
-            case (Rating === 5):
-            <div>
-                {redstar}{redstar}{redstar}{redstar}{redstar}
-            </div>
-            break;
-            default:
-                console.log(Rating)
-
+const Rating = ({ rating }) => {
+    const ratingStars = [1, 2, 3, 4, 5];
+  
     return (
-            <div>{Ratings}</div>
-        )
-    }
-}
-    export default Ratings;
-
+      <div className="rating">
+        {/* Loop to display star by rating */}
+        {ratingStars.map((ratingStar) =>
+          rating >= ratingStar ? (
+            <img
+              key={ratingStar.toString()}
+              src={redstar}
+              alt="etoile rouge"
+            />
+          ) : (
+            <img
+              key={ratingStar.toString()}
+              src={greystar}
+              alt="etoile grise"
+            />
+          )
+        )}
+      </div>
+    );
+  };
+  
+  export default Rating;

@@ -1,5 +1,5 @@
 import React from "react";
-import DropdownLarge from "../../components/DropdownLarge/DropdownLarge";
+import Dropdown from "../../components/Dropdown/Dropdown";
 import about_banner from "../../assets/about-banner.jpg"
  
 	
@@ -63,7 +63,7 @@ const AboutDatas = [
 			{/* Looping through the AboutDatas array and displaying each item as a Dropdown. */}
 					<div className="collapse_container_AboutUs">
 					{AboutDatas.map((AboutData, index) => (
-						<DropdownLarge
+						<Dropdown
 							title={AboutData.title}
 							content={AboutData.content}
 							key={`${AboutData.title}-${index}`}

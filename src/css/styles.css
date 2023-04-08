@@ -30,7 +30,6 @@ li {
 @media screen and (max-width: 992px) {
   .main-container {
     margin: 2% 5%;
-    /* padding: 0 0.5%; */
   }
 }
 /*import components*/
@@ -47,6 +46,12 @@ li {
 }
 .headerWrap_ul {
   text-align: center;
+}
+.headerWrap .nav-active li {
+  text-decoration: underline;
+}
+.headerWrap .nav-link li {
+  text-decoration: none;
 }
 .headerWrap li {
   display: inline-block;
@@ -65,7 +70,7 @@ li {
     align-items: center;
   }
   .headerWrap_logo {
-    width: 35%;
+    width: 30%;
   }
   .headerWrap_nav {
     margin: 0;
@@ -112,7 +117,6 @@ li {
   .banner figcaption {
     font-size: 1.5rem;
     left: 10%;
-    /* top: 25%; */
   }
 }
 .foot-container {
@@ -149,10 +153,10 @@ li {
 .home_CardList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: #f7f7f7;
   width: 100%;
-  gap: 60px;
+  gap: 20px 70px;
   margin: 30px 0;
   padding: 50px;
   border-radius: 20px;
@@ -163,7 +167,7 @@ li {
     flex-direction: column;
     width: 100%;
     padding: 0;
-    gap: 15px;
+    gap: 0px;
     background-color: white;
     margin: 0;
   }
@@ -190,7 +194,7 @@ li {
 
 @media screen and (max-width: 991px) {
   .card-logement img {
-    height: 400px;
+    height: 350px;
     width: 100%;
   }
   .card-logement__title {
@@ -263,11 +267,10 @@ li {
 }
 
 .fold {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
   transition: 0.2s ease-in-out;
 }
 
-/* @import '../components/DropdownSmall/DropdownSmall'; */
 /*import page style sheets*/
 .notFound_infos_title {
   font-size: 9rem;
@@ -309,6 +312,8 @@ a {
   flex-direction: column;
   justify-content: center;
   width: 80%;
+  margin: auto;
+  padding: 1% 0 20% 0;
 }
 
 .collapse_container__content {
@@ -318,18 +323,18 @@ a {
 @media screen and (max-width: 992px) {
   .about_banner {
     width: 100%;
-    height: 1200px;
-    margin: 0%;
+    height: 120px;
+    margin: 2% 0%;
+  }
+  .banner-img {
+    height: 220px;
   }
   .collapse_container_AboutUs {
     display: flex;
     flex-direction: column;
     gap: 5%;
-    width: 80%;
-    margin: auto;
-  }
-  .about_banner {
-    height: 150px;
+    width: 100%;
+    margin: 1% 5% 50% auto;
   }
 }
 .lodging-heading {
@@ -375,17 +380,16 @@ a {
 
 .lodging-subheading-tags {
   display: flex;
-  justify-content: space-around;
+  padding-right: 2%;
 }
 
 .lodging-subheading-tags-pill {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  border-radius: 25px;
+  border-radius: 10px;
   margin: 3% 1% 0 0;
   width: 12rem;
-  height: 30px;
+  height: 25px;
   color: #f7f7f7;
   background-color: #ff6060;
 }
@@ -396,7 +400,7 @@ a {
 
 .lodging-heading-main-owner__picture img {
   border-radius: 50%;
-  height: 80px;
+  height: 70px;
 }
 
 .lodging-subheading__ratings {
@@ -427,6 +431,10 @@ a {
 }
 
 @media screen and (max-width: 992px) {
+  .lodging-subheading-tags-pill {
+    font-size: 0.8rem;
+    width: 65%;
+  }
   .lodging-container {
     flex-direction: column;
   }
@@ -434,7 +442,15 @@ a {
     margin: 0;
   }
   .lodging-heading-main__title h1 {
-    font-weight: 400;
+    font-weight: 100;
+    font-size: 1.5rem;
+    margin-top: 2%;
+  }
+  .collapse-container-heading {
+    font-size: 1.1rem;
+  }
+  .collapse_container__content {
+    font-size: 1.1rem;
   }
   .lodging-subheading {
     display: flex;
@@ -445,12 +461,13 @@ a {
   }
   .lodging-heading-main-owner {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 50%;
     margin: 0;
   }
   .lodging-heading-main-owner__name {
     width: 20%;
+    margin-right: 5%;
   }
   .lodging-subheading__ratings {
     margin: 0;
@@ -460,6 +477,7 @@ a {
   }
   .lodging-heading-main-owner__picture img {
     height: 50px;
+    margin-left: 15%;
   }
   .lodging-collapse-container {
     display: flex;

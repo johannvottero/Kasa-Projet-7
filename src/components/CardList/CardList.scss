@@ -1,12 +1,12 @@
 .home_CardList {
     display: flex;
 	flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
 	background-color: $secondary-color;
     width: 100%;
-    gap: 60px;
+    gap: 20px 70px;
     margin: 30px 0; 
-    padding: 50px;
+    padding: 25px 50px;
     border-radius: 20px;
 }
 
@@ -15,7 +15,7 @@
         flex-direction: column;
         width: 100%;
         padding:0;
-        gap: 15px;
+        gap: 0px;
         background-color: white;
         margin: 0;
     }

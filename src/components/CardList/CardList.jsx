@@ -7,6 +7,7 @@ export default function CardList() {
 	const [lodgings, setLodgings] = useState([]);
 
 	useEffect(() => {
+		//fectching datas
 		fetch("http://localhost:3000/lodgings.json", {
 			headers: {
 				"Content-Type": "application/json",
@@ -24,6 +25,7 @@ export default function CardList() {
 		});
 	}, []);
 
+	//checking datas, generating link and building cards
 	return (
 		<main className='home_CardList'>
 			{ lodgings && lodgings.length > 0 && lodgings.map((lodging) =>

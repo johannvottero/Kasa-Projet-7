@@ -1,10 +1,8 @@
-import bannerImg from "../../assets/background-banner.png";
-
-const Banner = () => {
+const Banner = (props) => {
 	return (
 		<figure className="banner main-container">
-			<img className ="banner-img" src={bannerImg} alt="côte surplombée de forêts"></img>
-				<figcaption>Chez vous, partout et ailleurs</figcaption>
+			<img className ="banner-img" src={props.image} alt={props.title}></img>
+				<figcaption>{props.title}</figcaption>
 		</figure>
 	);
 }

@@ -33,15 +33,14 @@ const Lodging = () => {
 		.catch(function(error) {
 			console.log(error);
 		});
-	},);
+	}, []);
 	
 	return (
 		<div className="lodging main-container">
 			{lodging && (
 				<div>
 					<Gallery
-					pictures={lodging.pictures.map((picture, index) =>
-						<img src={lodging.picture} alt=""/>)}
+						pictures={lodging.pictures}
 					/>
 					<div className="lodging-container">
 						<div className="lodging-heading">
@@ -50,8 +49,8 @@ const Lodging = () => {
 								<div className="lodging-heading-main__title"><h1>{lodging.title}</h1></div>
 								<div className="lodging-heading-main__location">{lodging.location}</div>
 								<div className="lodging-subheading-tags">
-									{ lodging.tags && lodging.tags.length > 0 && lodging.tags.map((tag) =>
-										<div className="lodging-subheading-tags-pill">{tag}</div>
+									{ lodging.tags && lodging.tags.length > 0 && lodging.tags.map((tag, index) =>
+										<div key={`lodging-subheading-tags-pill-${index}`} className="lodging-subheading-tags-pill">{tag}</div>
 									)}
 								</div>
 							</div>
@@ -71,7 +70,6 @@ const Lodging = () => {
 					<div className="lodging-collapse-container">
 						<div className="lodging-collapse-container__rightColumn">
 							<Dropdown
-								open={true}
 								title="Description"
 								content={lodging.description}
 							/>
@@ -79,7 +77,6 @@ const Lodging = () => {
 						{ lodging.equipments && lodging.equipments.length > 0 && (
 							<div className="lodging-collapse-container__leftColumn">
 								<Dropdown
-									open={true}
 									title="Équipements"
 									content={lodging.equipments.map((equipement, index) =>
 										<li key={`equipment-${index}`}>{`${equipement}`}</li>

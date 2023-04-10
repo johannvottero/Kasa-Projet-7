@@ -1,77 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Banner from '../../components/Banner/Banner';
 import Dropdown from "../../components/Dropdown/Dropdown";
-import about_banner from "../../assets/about-banner.jpg"
- 
-	
-/* useEffect(() => {
-
-	fetch("http://localhost:3000/aboutArray.json", {
-		headers: {
-			"Content-Type": "application/json",
-			Accept: "application/json",
-		},
-	})
-	.then(function(response) {
-		return response.json()
-	})
-	.then(function(json) {
-		setContentDropDownLarge(json);
-	})
-	.catch(function(error) {
-		console.log(error);
-	});
-}, []);
-
- { ContentDropdownLarge.length > 0 && ContentDropdownLarge.map((DropdownLarge) =>
-	title={DropdownLarge.title},
-	content={DropdownLarge.cover},
-)}  */
+import aboutBannerImg from "../../assets/about-banner.jpg"
 
 function AboutUs () {
 
-const AboutDatas = [
-	/* Setting datas */
-	{
-		title: 'Fiabilité',
-		content:
-			'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.',
-	},
-	{
-		title: 'Respect',
-		content:
-			'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
-	},
-	{
-		title: 'Service',
-		content:
-			"Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question.",
-	},
-	{
-		title: 'Sécurité',
-		content:
-			"La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.",
-	},
-]
+	const [aboutContent, setAboutContent] = useState([]);
 
-		return (
-				<div className='main-container'>
-					<img
-						className="banner-img about_banner"
-						src={about_banner}
-						alt="Banner">
-					</img>
+	useEffect(() => {
+		fetch("http://localhost:3000/about.json", {
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+			},
+		})
+		.then(function(response) {
+			return response.json()
+		})
+		.then(function(json) {
+			setAboutContent(json);
+		})
+		.catch(function(error) {
+			console.log(error);
+		});
+	}, []);
 
-			{/* Looping through the AboutDatas array and displaying each item as a Dropdown. */}
-					<div className="collapse_container_AboutUs">
-					{AboutDatas.map((AboutData, index) => (
-						<Dropdown
-							title={AboutData.title}
-							content={AboutData.content}
-							key={`${AboutData.title}-${index}`}
-						/>
-					))}
-					</div>
-				</div>
+	return (
+		<div className='main-container'>
+			<Banner
+				title=""
+				image={aboutBannerImg}
+			/>
+
+		{/* Looping through the AboutDatas array and displaying each item as a Dropdown. */}
+		<div className="collapse_container_AboutUs">
+			{ aboutContent && aboutContent.length > 0 && aboutContent.map((aboutContent, index) =>
+				<Dropdown
+					title={aboutContent.title}
+					content={aboutContent.content}
+					key={`${aboutContent.title}-${index}`}
+				/>
+			)}
+			</div>
+		</div>
 	)
 }
 

@@ -27,14 +27,13 @@ li {
     margin-left: 1.5rem;
     color: $primary-color;
     font-size: 1.3rem;
-	&:hover {
+
+	    &:hover {
 		text-decoration: underline;
 	}
     
 	}
 }
-
-
 
 
 @media screen and (max-width: 991px) {

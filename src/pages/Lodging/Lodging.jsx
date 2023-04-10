@@ -6,12 +6,12 @@ import Ratings from '../../components/Ratings/Ratings';
 import Dropdown from "../../components/Dropdown/Dropdown";
 
 const Lodging = () => {
-
+	/* settings const  */
 	const { id } = useParams();
 	const navigate = useNavigate();
 	const [lodging, setLodgingData] = useState(null);
 
-
+	/* Fetching lodging datas */
 	useEffect(() => {
 		fetch("http://localhost:3000/lodgings.json", {
 			headers: {
@@ -39,7 +39,10 @@ const Lodging = () => {
 		<div className="lodging main-container">
 			{lodging && (
 				<div>
-					<Gallery/>
+					<Gallery
+					pictures={lodging.pictures.map((picture, index) =>
+						<img src={lodging.picture} alt=""/>)}
+					/>
 					<div className="lodging-container">
 						<div className="lodging-heading">
 							<div className="lodging-heading-main">

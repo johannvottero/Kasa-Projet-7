@@ -19,15 +19,16 @@
 }
 
 @media screen and (max-width: 991px) {
-        .card-logement img{
-        height: 350px;
-        width: 100%;
-        }
-        .card-logement__title{
-        font-size: 2rem;
-        }
-        .card-logement__title {
-        width: 80%;
-        font-size: 1.5rem;
-        }
+
+.card-logement img{
+    height: 350px;
+    width: 100%;
     }
+.card-logement__title{
+    font-size: 2rem;
+    }
+.card-logement__title {
+    width: 80%;
+    font-size: 1.5rem;
+    }
+}

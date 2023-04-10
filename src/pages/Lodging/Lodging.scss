@@ -67,14 +67,12 @@
 
 .lodging-heading-main__title h1{
     font-weight: 300;
-
 }
-
 
 .lodging-subheading__ratings{
     display: flex;
     justify-content: space-around;
-    margin-top: 23%;
+    margin-top: 30%;
 }
 
 .lodging-subheading__ratings img{
@@ -87,6 +85,7 @@
 {
     display: flex;
     width: 100%;
+    margin-bottom: 10%;
 }
 
 .lodging-collapse-container__rightColumn{

@@ -1,7 +1,6 @@
-
 .Gallery {
     width: 100%;
-    margin: auto;
+    position: relative;
 }
 
 .Gallery img
@@ -10,5 +9,37 @@
     height: 400px;
     border-radius: 25px;
     margin-top:2%;
+    object-fit: cover;
+}
+
+.Gallery-Chevron__left img {
+    width: 80px;
+    height: 90px;
+    position: absolute;
+    top: 160px;
+    left: 0px;
+}
+
+.Gallery-Chevron__right img {
+    width: 80px;
+    height: 90px;
+    position: absolute;
+    top: 160px;
+    right: 0px;
+
+}
+
+
+@media screen and (max-width: 991px) {
+    .Gallery-Chevron__left img {
+        width: 40px;
+        height: 50px;
+    }
+
+    .Gallery-Chevron__right img {
+        width: 40px;
+        height: 50px;
+
+    }
 
 }

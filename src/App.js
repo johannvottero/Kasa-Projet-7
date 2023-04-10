@@ -6,7 +6,6 @@ import Home from "./pages/Home/Home";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Lodging from "./pages/Lodging/Lodging";
 import Error404 from "./pages/Error404/Error404";
-import "./css/styles.css";
 
 function App() {
 	return (

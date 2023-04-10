@@ -8,6 +8,7 @@ const Header = () => {
 			<img className="headerWrap_logo" src={logo} alt="logo de l'agence kasa" />
 			<nav className="headerWrap_nav">
 				<ul>
+					{/* Setting condition to apply css style on navigation link */}
 					<NavLink className={({ isActive }) =>
 						isActive ? 'nav-active' : 'nav-link'} to="/">
 						<li>Accueil</li>

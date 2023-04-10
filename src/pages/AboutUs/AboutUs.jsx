@@ -30,6 +30,7 @@ import about_banner from "../../assets/about-banner.jpg"
 function AboutUs () {
 
 const AboutDatas = [
+	/* Setting datas */
 	{
 		title: 'Fiabilité',
 		content:

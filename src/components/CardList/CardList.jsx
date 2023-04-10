@@ -28,6 +28,7 @@ export default function CardList() {
 	//checking datas, generating link and building cards
 	return (
 		<main className='home_CardList'>
+			{/* looping on lodging datas to build cards */}
 			{ lodgings && lodgings.length > 0 && lodgings.map((lodging) =>
 				<Link key={`lodging-link-${lodging.id}`} to={`/lodging/${lodging.id}`}>
 					<Card

@@ -13,13 +13,13 @@ const Rating = ({ rating }) => {
             <img
               key={ratingStar.toString()}
               src={redstar}
-              alt="etoile rouge"
+              alt="red star"
             />
           ) : (
             <img
               key={ratingStar.toString()}
               src={greystar}
-              alt="etoile grise"
+              alt="grey star"
             />
           )
         )}

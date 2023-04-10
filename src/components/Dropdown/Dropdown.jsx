@@ -3,7 +3,7 @@ import chevron from "../../assets/Vector.png";
 
 
 const DropdownLarge = (props) => {
-
+	// initializing state 
 	const [open, setOpen] = useState(props.open ?? false)
 
 	const toggleOpen = () => {
@@ -25,9 +25,11 @@ const DropdownLarge = (props) => {
 					<span>{props.title}</span>
 				</div>
 				<div className="collapse_container__chevron">
+					{/* condition on collapse state : open / closed for the chevron animation*/}
 				<div className={open ? `.collapse_container__chevron unfold ` : `.collapse_container__chevron fold`}><img className="chevron" src={chevron} alt="chevron"/></div>
 				</div>
 			</div>
+			{/* condition on collapse state : open / closed for the display instruction*/}
 			<div className={open ? `collapse_container__content open ` : `collapse_container__content closed`} >{props.content}</div>
 		</div>
 	);

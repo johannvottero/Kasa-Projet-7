@@ -5,6 +5,7 @@ import Gallery from '../../components/Gallery/Gallery';
 import Ratings from '../../components/Ratings/Ratings';
 import Dropdown from "../../components/Dropdown/Dropdown";
 
+
 const Lodging = () => {
 	/* settings const  */
 	const { id } = useParams();

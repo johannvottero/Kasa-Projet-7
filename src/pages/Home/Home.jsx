@@ -3,6 +3,7 @@ import Banner from '../../components/Banner/Banner';
 import CardList from '../../components/CardList/CardList';
 import bannerImg from "../../assets/home-banner.jpg";
 
+
 export default function Home() {
 	return (
 		<div className='home main-container'>

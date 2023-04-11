@@ -256,7 +256,12 @@ li {
 }
 
 .counter_img {
-  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+  position: absolute;
+  color: #F7F7F7;
+  top: 90%;
+  left: 50%;
 }
 
 .Gallery-picture.active {
@@ -297,6 +302,14 @@ li {
   .Gallery-Chevron__right img {
     width: 40px;
     height: 50px;
+  }
+  .counter_img {
+    font-weight: 500;
+    font-size: 1.2rem;
+    position: absolute;
+    color: #F7F7F7;
+    top: 90%;
+    left: 45%;
   }
 }
 .collapse-container {

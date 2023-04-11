@@ -8,11 +8,11 @@ function AboutUs () {
 	const [aboutContent, setAboutContent] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:3000/about.json", {
-			headers: {
+		fetch("https://johannvottero.github.io/Projet-7-Kasa/public/about.json", {
+/* 			headers: {
 				"Content-Type": "application/json",
 				Accept: "application/json",
-			},
+			}, */
 		})
 		.then(function(response) {
 			return response.json()

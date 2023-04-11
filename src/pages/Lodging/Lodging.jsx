@@ -5,7 +5,6 @@ import Gallery from '../../components/Gallery/Gallery';
 import Ratings from '../../components/Ratings/Ratings';
 import Dropdown from "../../components/Dropdown/Dropdown";
 
-
 const Lodging = () => {
 	/* settings const  */
 	const { id } = useParams();
@@ -14,11 +13,13 @@ const Lodging = () => {
 
 	/* Fetching lodging datas */
 	useEffect(() => {
-		fetch("http://localhost:3000/lodgings.json", {
+/* 		fetch("http://localhost:3000/lodgings.json", {
+			
 			headers: {
 				"Content-Type": "application/json",
 				Accept: "application/json",
-			},
+			}, */
+			fetch("https://johannvottero.github.io/Projet-7-Kasa/public/lodgings.json", {
 		})
 		.then(function(response) {
 			return response.json()
@@ -34,7 +35,7 @@ const Lodging = () => {
 		.catch(function(error) {
 			console.log(error);
 		});
-	}, []);
+	},);
 	
 	return (
 		<div className="lodging main-container">
